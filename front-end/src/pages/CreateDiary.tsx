@@ -147,9 +147,11 @@ export default function CreateDiary() {
                           <SelectContent>
                             <SelectItem value="HAPPY">Happy 😊</SelectItem>
                             <SelectItem value="SAD">Sad 😢</SelectItem>
-                            <SelectItem value="ANGRY">Angry 😡</SelectItem>
-                            <SelectItem value="CALM">Calm 😌</SelectItem>
-                            <SelectItem value="EXCITED">Excited 🤩</SelectItem>
+                            <SelectItem value="WORST">WORST 😡</SelectItem>
+                            <SelectItem value="BEST">BEST 😌</SelectItem>
+                            <SelectItem value="ROMANTIC">
+                              ROMANTIC 🤩
+                            </SelectItem>
                           </SelectContent>
                         </Select>
                       </FormControl>
@@ -208,7 +210,7 @@ export default function CreateDiary() {
                 type="submit"
                 className=" cursor-pointer w-full mt-2 bg-gradient-to-r from-amber-400 to-pink-400 hover:from-amber-500 hover:to-pink-500 text-white font-bold px-6 py-3 rounded-2xl shadow-lg transition-all duration-300"
               >
-              {mutation.isPending ? "Saving..." : "Save Diary"}
+                {mutation.isPending ? "Saving..." : "Save Diary"}
               </Button>
             </div>
             {/* Button for desktop */}
@@ -218,7 +220,7 @@ export default function CreateDiary() {
                 type="submit"
                 className="cursor-pointer bg-gradient-to-r from-amber-400 to-pink-400 hover:from-amber-500 hover:to-pink-500 text-white font-bold px-8 py-3 rounded-2xl shadow-lg transition-all duration-300 text-lg"
               >
-              {mutation.isPending ? "Saving..." : "Save Diary"}
+                {mutation.isPending ? "Saving..." : "Save Diary"}
               </Button>
             </div>
           </form>

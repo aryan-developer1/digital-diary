@@ -88,7 +88,20 @@ const fetchDiary = async (req, res) => {
     const limit = parseInt(req.query.limit) || 9;
     const skip = (page - 1) * limit;
 
-    const diaries = await Diary.find().skip(skip).limit(limit);
+    //search logic
+    const searchTerm = req.query.search || "";
+    
+
+    const diaries = await Diary.find({
+      $or: [
+        { title: { $regex: searchTerm, $options: "i" } },
+        { mood: { $regex: searchTerm, $options: "i" } }
+      ]
+    })
+      .sort({ _id: -1 })
+      .skip(skip)
+      .limit(limit);
+    
     return res.status(200).json({
       success: true,
       message: "diary fetched successfully!",
