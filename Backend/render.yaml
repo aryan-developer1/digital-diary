@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: digital-diary-backend
+    env: node
+    rootDir: Backend
+    buildCommand: "echo 'no build'"
+    startCommand: "npm start"
