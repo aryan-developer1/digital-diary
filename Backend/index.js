@@ -6,7 +6,7 @@ const app = express();
 const port = 3000;
 const allowedOrigins = [
   "http://localhost:5173",
-  "https://digital-diary-ixpxbkv32-aryan-sonis-projects-8bf9baae.vercel.app",
+  "https://digital-diary-two.vercel.app",
 ];
 
 app.use(
